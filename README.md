@@ -7,7 +7,7 @@ It spawns a new thread that runs in a loop, waiting for a `WindowEvent::Focused(
 `WindowMap` exposed through the `tauri-runtime-wry` public API, and sends a `WindowMessage::Close` to every window in
 the map, forgets the mutable reference, and parks the thread.
 
-This will cause a RefCell panic immediately. Enable in `tauri::App::wry_plugin(&mut self, NaughtyPluginBuilder);`.
+This will cause a RefCell panic immediately. Enable with `app.wry_plugin(TauriRuntimeWryNaughtyRefcellPlugin)`.
 
 ## Example
 
