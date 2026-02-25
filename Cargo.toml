@@ -1,0 +1,24 @@
+[workspace]
+members = ["example/src-tauri"]
+default-members = ["example/src-tauri"]
+
+[workspace.package]
+license = "MIT or Unlicense"
+edition = "2024"
+
+[workspace.dependencies]
+tauri = { version = "2", default-features = false, features = ["wry"] }
+tauri-build = "2"
+tauri-runtime = { version = "2", default-features = false }
+tauri-runtime-wry = { version = "2", default-features = false }
+tauri-runtime-wry-naughty-refcell-plugin = { path = "." }
+
+[package]
+name = "tauri-runtime-wry-naughty-refcell-plugin"
+version = "0.1.0"
+license.workspace = true
+edition.workspace = true
+
+[dependencies]
+tauri-runtime.workspace = true
+tauri-runtime-wry.workspace = true
